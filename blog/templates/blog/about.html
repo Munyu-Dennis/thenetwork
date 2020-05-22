@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'blog/base.html'%} {% block content %}{% load static%}
+<article class="media content-section">
+
+
+
+
+
+    <div class="content-section">
+        <div class="media">
+            <a href="http://127.0.0.1:8000/static/blog/Munyu.jpg"><img class="rounded-circle account-img" src="{% static 'blog/Munyu.jpg'%}"></a>
+            <div class="media-body">
+                <h2 class="account-heading"><u>Dennis Munyu</u></h2>
+                <p class="text-secondary"> The Developer and super Admin of this site</p>
+                <p class="text-secondary"> for any suggestions and complains reach him through:</p>
+                <p class="text-secondary">
+                    <a class="article-title" href="https://wwww.facebook.com/deno.delphina"><img src="{% static 'blog/facebook.png'%}"> Munyu Dennis </a>
+                </p>
+                <p class="text-secondary">
+                    <a class="article-title" href="https://wwww.twitter.com"><img src="{% static 'blog/twitter.png'%}"> @DennisMunyu</a>
+                </p>
+            </div>
+        </div>
+        <!-- FORM HERE -->
+    </div>
+
+</article>
+{% endblock %}
+
+</html>

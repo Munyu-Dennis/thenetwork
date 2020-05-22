@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'blog/base.html'%} {% block content %}{% load static%}
+<article class="media content-section">
+    <img class="rounded-circle article-img " src="{% static 'blog/anony.png' %}">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="{% url 'user-info'%}">Anonymous</a>
+            <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small> {% if object.author == user %}
+            <div>
+                <a class="btn btn-secondary bt-sm mt-1 mb-1" href="{% url 'anonypost-update' object.id %}">Update</a>
+                <a class="btn btn-danger bt-sm mt-1 mb-1" href="{% url 'anonypost-delete' object.id %}">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        <h2 class="article-title">{{ object.title }}</h2>
+        <p class="article-content">{{ object.content }}</p>
+        <div class="article-metadata">
+            <a class="btn btn-secondary bt-sm mt-1 mb-1" href="{% url 'anonycomment-create' object.id %}">comment</a>
+            <a class="btn btn-secondary bt-sm mt-1 mb-1" href="{% url 'anonycomments' object.id %}">Show Comments</a>
+        </div>
+    </div>
+</article>
+
+{% endblock %}
+
+</html>

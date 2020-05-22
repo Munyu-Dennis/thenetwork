@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'blog/base.html'%} {% block content %}{% load static%}
+<article class="media content-section">
+    <img class="rounded-circle article-img " src="{% static 'blog/anony.png' %}">
+    <div class="media-body">
+        <h2> This person is in anonymous mode and so are you</h2>
+    </div>
+</article>
+
+{% endblock %}
+
+</html>
